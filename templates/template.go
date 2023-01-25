@@ -10,6 +10,7 @@ import (
 
 // TemplateName is an enumeration of template name that are allowed.
 // ENUM(
+// success.tmpl
 // verify.tmpl
 // )
 type TemplateName string
@@ -21,6 +22,7 @@ func (x TemplateName) String() string {
 
 var _TemplateNameNames = []string{
 	string(TemplateNameVerifyTmpl),
+	string(TemplateNameSuccessTmpl),
 }
 
 // TemplateNameNames returns a list of possible string values of TemplateName.
@@ -30,7 +32,10 @@ func TemplateNameNames() []string {
 	return tmp
 }
 
-const TemplateNameVerifyTmpl TemplateName = "verify.tmpl"
+const (
+	TemplateNameVerifyTmpl  TemplateName = "verify.tmpl"
+	TemplateNameSuccessTmpl TemplateName = "success.tmpl"
+)
 
 //go:embed *
 var f embed.FS
